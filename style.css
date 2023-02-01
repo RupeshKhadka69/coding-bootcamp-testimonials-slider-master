@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+*,*::before,::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: hsl(240, 18%, 77%);
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.m1{margin-top: 1rem;}
+.m2{margin-top: 2rem;}
+.m3{margin-top: 3rem;}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+main{
+    display: grid;
+    place-items: center;
+    width: 90vw;
+    margin-inline: auto;
+    max-width: 1000px;
+    height: 100vh;
+    position: relative;
+    
+}
+.container {
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  place-items: center;
+  
+  
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.text-content {
+    transform: translateX(100px);
+    z-index: 1000;
+    position: relative;
+}
+.person-info {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.person{
+    padding: 4rem 2rem;
+}
+.image-contents {
+    background-image: url(./images/pattern-bg.svg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.profession{
+    gap: 1rem;
+}
+.image2{
+     width: 20rem;
+     z-index: 4;
+}
+.text-content::before {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+
+    position: absolute;
+    top: -40px;
+    left: 60px;
+    background: url(./images/pattern-quotes.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    
+  
+}
+
+
+.arrow-icon .prev,.arrow-icon .next {
+    transition: .3s;
+    padding: 10px;
+    cursor: pointer;
+}
+ .prev:hover, .next:hover{
+    background: rgba(206, 208, 210, 0.831);
+}
+
+.arrow-icon  {
+   position: relative;
+   z-index: 2242424232;
+   left: 10rem;
+   width: 5rem;
+   align-items: center;
+   justify-content: space-evenly;
+   gap: .5rem;
+   top: -2rem;
+   background: hsl(240, 12%, 93%);
+   cursor: pointer;
+
+}
+.curve-image {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+   
+}
+
+@media screen and (max-width:980px) {
+   
+     
+    
+   
+   
+   .person-info {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+    
+}
+
+@media screen and (max-width: 750px) {
+   
+    .container {
+        grid-template-columns: none;
+        position: relative;
+        place-items: center;
+        
+        
+      }
+     
+      .container .image-contents {
+        grid-column-start: 1;
+        grid-row-start: 1;
+      }
+      .text-content {
+        transform: translateX(0);
+        z-index: 1000;
+        position: relative;
+    }
+    
+
+    .person{
+        width: 90%;
+        text-align: center;
+
+        margin-inline: auto;
+   }
+   .image2{
+    width: 60%;
+    
+}
+    
+    .image-contents{
+       display: grid;
+       place-items: center;
+       width: 80vw;
+    }
+    .arrow-icon  {
+        position: relative;
+        z-index: 2242424232;
+        left: -1rem;
+        width: 5rem;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: .5rem;
+        top: -4rem;
+        background: hsl(240, 12%, 93%);
+        cursor: pointer;
+     
+     }
+      
+  
+ .arrow-icon{
+    width: 5rem;
+ }
+    main{
+        width: 100vw;
+        margin-inline: auto;
+        margin-top: 2rem;
+        height: auto;
+        position: relative;
+        padding-inline: 4rem;
+        
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    main{
+        width: 100vw;
+        margin-inline: auto;
+        margin-top: .5rem;
+        padding-inline: 1rem;
+        
+    }
+    
+
+    .image2{
+        width: 90%;
+        margin-inline: auto;
+   }
+   
+   .arrow-icon  {
+    width: 5rem;
+    top: -4rem;
+ 
+ }
+ .arrow-icon{
+    width: 5rem;
+ }
+
+}
